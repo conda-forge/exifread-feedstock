@@ -1,7 +1,6 @@
 {% set name = "ExifRead" %}
-{% set version = "2.1.2" %}
-{% set hash_type = "sha256" %}
-{% set hash = "79e244f2eb466709029e8806fe5e2cdd557870c3db5f68954db0ef548d9320ad" %}
+{% set version = "2.3.1" %}
+{% set hash = "269ff3a8eab8e082734a076182cce6fb126116619c0b7c2009bea34502cca213" %}
 
 package:
   name: {{ name|lower }}
@@ -10,12 +9,12 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   noarch: python
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
