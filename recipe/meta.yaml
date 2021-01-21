@@ -1,7 +1,6 @@
 {% set name = "ExifRead" %}
-{% set version = "2.1.2" %}
-{% set hash_type = "sha256" %}
-{% set hash = "79e244f2eb466709029e8806fe5e2cdd557870c3db5f68954db0ef548d9320ad" %}
+{% set version = "2.3.2" %}
+{% set hash = "a0f74af5040168d3883bbc980efe26d06c89f026dc86ba28eb34107662d51766" %}
 
 package:
   name: {{ name|lower }}
@@ -10,20 +9,21 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   noarch: python
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - pip
     - python
+    - python >=3.4
     - setuptools
   run:
-    - python
+    - python >=3.4
 
 test:
   imports:
@@ -33,7 +33,7 @@ test:
 
 about:
   home: https://github.com/ianare/exif-py
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE.txt
   summary: Read Exif metadata from tiff and jpeg files.
   description: |
