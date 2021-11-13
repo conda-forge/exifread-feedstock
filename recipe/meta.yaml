@@ -19,11 +19,10 @@ build:
 requirements:
   host:
     - pip
-    - python
-    - python >=3.4
+    - python >=3
     - setuptools
   run:
-    - python >=3.4
+    - python >=3
 
 test:
   imports:
@@ -41,5 +40,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - anjos
     - goanpeca
     - rlaverde
