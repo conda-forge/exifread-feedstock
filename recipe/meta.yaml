@@ -35,7 +35,7 @@ test:
 about:
   home: https://github.com/ianare/exif-py
   license: BSD-3-Clause
-  license_file: LICENSE.txt
+  license_file: LICENSE
   summary: Read Exif metadata from tiff and jpeg files.
   description: |
     Easy to use Python module to extract Exif metadata from tiff and jpeg files.
