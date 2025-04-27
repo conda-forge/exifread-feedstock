@@ -1,6 +1,6 @@
 {% set name = "ExifRead" %}
-{% set version = "3.1.0" %}
-{% set hash = "64d886c2bf2cc07655bd7d0859f6ba6db3b31ed64b58007868534a0ed0dc0eba" %}
+{% set version = "3.2.0" %}
+{% set hash = "9bc3e34b2a25754a445aadd94c9af911928ef95de8c7a91f85219a8b4202c23d" %}
 
 package:
   name: {{ name|lower }}
